@@ -32,11 +32,13 @@
     </section>
     <section class="social">
       <ul class="social list-inline">
-        <li ng-repeat="(name, link) in mainCtrl.data.social track by $index">
-          <a class="links" target="_blank" href="{{link}}">
-            <i class="icon-{{name}}-sign"></i>
-          </a>
-        </li>
+        {{#each model as |link|}}
+          <li>
+            <a class="links" target="_blank" href="{{link}}">
+              <i class="icon-{{name}}-sign"></i>
+            </a>
+          </li>
+        {{/each}}
       </ul>
       <div>
         <a target="_blank" href="https://www.kaizomario.com/blog/">Blog</a>

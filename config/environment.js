@@ -16,7 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+		firebase: {
+			apiKey: "AIzaSyBR_rOY7RY6Hr91yRW_RuodfuIZuzmNlZA",
+			authDomain: "popping-heat-9561.firebaseapp.com",
+			databaseURL: "https://popping-heat-9561.firebaseio.com",
+			projectId: "firebase-popping-heat-9561",
+			storageBucket: "firebase-popping-heat-9561.appspot.com",
+			messagingSenderId: "711965991150"
+		},
   };
 
   if (environment === 'development') {

@@ -1,7 +1,5 @@
 html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -13,10 +11,11 @@ body {
 }
 
 body {
+  background: url(http://www.kaizomario.com/images/background.jpg) no-repeat center center;
+  background-size: cover;
   position: relative;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  background-color: #fff;
   box-sizing: border-box;
   min-height: 100%;
 }
@@ -43,14 +42,12 @@ body {
 }
 
 .ctn-curtain {
-  background: url(http://www.kaizomario.com/images/background.jpg) no-repeat center center;
-  background-size: cover;
   min-height: 100%;
   width: 100%;
 }
 
 .ctn-curtain.section-footer {
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .ctn-curtain.section-footer a {
@@ -215,6 +212,10 @@ body.loaded .kaizo-mario-image-container {
   transition: transform 500ms;
   -webkit-transition: transform 500ms;
   -moz-transition: transform 500ms;
+}
+
+.jumbo {
+  color: #fff;
 }
 
 @media screen and (max-width: 767px) {
