@@ -1,1 +1,50 @@
-
+<div class="sticky">
+  <div class="sticky-image">
+    <img src="http://www.kaizomario.com/images/cmcheng.jpg">
+  </div>
+  <div class="sticky-user">Chung-Min Cheng</div>
+  <div class="sticky-shortintro">Web developer, Tokyo</div>
+  <div class="sticky-social">
+    <ul class="list-inline">
+      <li ng-repeat="(name, link) in stickyCtrl.data.social track by $index">
+        <a target="_blank" href="{{link}}">
+          <i class="icon-{{name}}-sign"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="ctn-curtain section-footer" ng-controller="MainCtrl as mainCtrl">
+  <div class="section-inner masthead container">
+    <section class="profile">
+      <div class="kaizo-mario-container">
+        <div class="kaizo-mario-image-container">
+          <img class="kaizo-mario-image" src="images/cmcheng.jpg">
+        </div>
+        <div class="kaizo-mario-pulse"></div>
+      </div>
+      <div class="kaizo-mario-name">
+        Chung-Min Cheng
+      </div>
+      <div class="tagline">
+        Web developer&nbsp;in&nbsp;Tokyo.
+      </div>
+    </section>
+    <section class="social">
+      <ul class="social list-inline">
+        <li ng-repeat="(name, link) in mainCtrl.data.social track by $index">
+          <a class="links" target="_blank" href="{{link}}">
+            <i class="icon-{{name}}-sign"></i>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <a target="_blank" href="https://www.kaizomario.com/blog/">Blog</a>
+      </div>
+    </section>
+    <section class="experience">
+      <div class="experience-left"></div>
+      <div class="experience-right"></div>
+    </section>
+  </div>
+</div>
