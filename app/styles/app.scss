@@ -8,10 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
   font-smooth: auto;
+  min-height: 100%;
 }
 
 body {
-  background: url(http://www.kaizomario.com/images/background.jpg) no-repeat center center;
+  background: url(//www.kaizomario.com/images/background.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
@@ -112,9 +113,6 @@ body {
 
 body.loaded .kaizo-mario-image-container {
   opacity: 1;
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
   transform: translateY(0%);
 }
 
@@ -133,29 +131,34 @@ body.loaded .kaizo-mario-image-container {
 }
 
 .sticky {
-  display: table;
-  width: 100%;
+  display: block;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
 }
 
 .sticky-image,
 .sticky-user,
 .sticky-shortintro,
 .sticky-social {
-  display: table-cell;
+  display: inline-block;
 }
 
 .sticky-image {
-  width: 15%;
-  text-align: right;
+  width: 65%;
+  float: left;
 }
 
 .sticky-image img {
   border-radius: 60px;
-  height: 60px;
+  height: 35px;
   margin: 6px 0;
-  transform: translate(0, -66px);
-  -webkit-transform: translate(0, -66px);
-  -moz-transform: translate(0, -66px);
+  /* transform: translate(0, -66px); */
 }
 
 .sticky-user {
@@ -173,6 +176,7 @@ body.loaded .kaizo-mario-image-container {
   width: 35%;
   vertical-align: middle;
   text-align: right;
+  float: left;
 }
 
 .sticky-social a {
@@ -187,8 +191,6 @@ body.loaded .kaizo-mario-image-container {
 .sticky-nav {
   display: none;
   opacity: 0;
-  -webkit-animation: fade-out 1s;
-  -moz-animation: fade-out 1s;
   animation: fade-out 1s;
 }
 
@@ -200,18 +202,12 @@ body.loaded .kaizo-mario-image-container {
   width: 100%;
   background-color: #fff;
   height: 72px;
-  -webkit-animation: fade-in 1s;
-  -moz-animation: fade-in 1s;
   animation: fade-in 1s;
 }
 
 .sticky-nav.active .sticky-image img {
   transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
   transition: transform 500ms;
-  -webkit-transition: transform 500ms;
-  -moz-transition: transform 500ms;
 }
 
 .jumbo {
