@@ -1,24 +1,52 @@
-<div class="container">
-  <div class="menu">
-    {{#link-to 'index'}}
-      <h1 class="left">
-        <em>KaizoMario</em>
-      </h1>
-    {{/link-to}}
-    <div class="left links">
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'work'}}
-        Work
-      {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
-      {{/link-to}}
+<div class="menu">
+  <div class="left links">
+    <div class="sticky ember-view">
+      <div class="sticky-image">
+        {{#link-to 'index'}}
+          <img src="//www.kaizomario.com/images/cmcheng.jpg">
+        {{/link-to}}
+        {{#link-to 'about'}}
+          About
+        {{/link-to}}
+        {{#link-to 'work'}}
+          Work
+        {{/link-to}}
+        {{#link-to 'contact'}}
+          Contact
+        {{/link-to}}
+      </div>
+      <div class="sticky-social">
+        <ul class="list-inline">
+          <li>
+            <a class="links" target="_blank" href="https://www.facebook.com/chungmin.cheng.9">
+              <i class="icon-facebook-sign"></i>
+            </a>
+          </li>
+          <li>
+            <a class="links" target="_blank" href="http://github.com/cchungmin">
+              <i class="icon-github-sign"></i>
+            </a>
+          </li>
+          <li>
+            <a class="links" target="_blank" href="http://plus.google.com/101928195101978330342">
+              <i class="icon-google-plus-sign"></i>
+            </a>
+          </li>
+          <li>
+            <a class="links" target="_blank" href="https://jp.linkedin.com/in/chungmincheng">
+              <i class="icon-linkedin-sign"></i>
+            </a>
+          </li>
+          <li>
+            <a class="links" target="_blank" href="https://twitter.com/ChungMinCheng">
+              <i class="icon-twitter-sign"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="body">
-    {{outlet}}
-  </div>
 </div>
-
+<div class="body container">
+  {{outlet}}
+</div>

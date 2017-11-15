@@ -1,20 +1,4 @@
-<div class="sticky">
-  <div class="sticky-image">
-    <img src="//www.kaizomario.com/images/cmcheng.jpg">
-  </div>
-  <div class="sticky-user">Chung-Min Cheng</div>
-  <div class="sticky-shortintro">Web developer, Tokyo</div>
-  <div class="sticky-social">
-    <ul class="list-inline">
-      <li ng-repeat="(name, link) in stickyCtrl.data.social track by $index">
-        <a target="_blank" href="{{link}}">
-          <i class="icon-{{name}}-sign"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="ctn-curtain section-footer" ng-controller="MainCtrl as mainCtrl">
+<div class="ctn-curtain section-footer">
   <div class="section-inner masthead container">
     <section class="profile">
       <div class="kaizo-mario-container">
@@ -27,18 +11,36 @@
         Chung-Min Cheng
       </div>
       <div class="tagline">
-        Web developer&nbsp;in&nbsp;Tokyo.
+        Web developer in Tokyo.
       </div>
     </section>
     <section class="social">
       <ul class="social list-inline">
-        {{#each model as |link|}}
-          <li>
-            <a class="links" target="_blank" href="{{link}}">
-              <i class="icon-{{name}}-sign"></i>
-            </a>
-          </li>
-        {{/each}}
+        <li>
+          <a class="links" target="_blank" href="https://www.facebook.com/chungmin.cheng.9">
+            <i class="icon-facebook-sign"></i>
+          </a>
+        </li>
+        <li>
+          <a class="links" target="_blank" href="http://github.com/cchungmin">
+            <i class="icon-github-sign"></i>
+          </a>
+        </li>
+        <li>
+          <a class="links" target="_blank" href="http://plus.google.com/101928195101978330342">
+            <i class="icon-google-plus-sign"></i>
+          </a>
+        </li>
+        <li>
+          <a class="links" target="_blank" href="https://jp.linkedin.com/in/chungmincheng">
+            <i class="icon-linkedin-sign"></i>
+          </a>
+        </li>
+        <li>
+          <a class="links" target="_blank" href="https://twitter.com/ChungMinCheng">
+            <i class="icon-twitter-sign"></i>
+          </a>
+        </li>
       </ul>
       <div>
         <a target="_blank" href="https://www.kaizomario.com/blog/">Blog</a>
