@@ -1,18 +1,18 @@
 <div class="menu">
   <div class="left links">
-    <div class="sticky ember-view">
+    <div class="sticky">
       <div class="sticky-image">
-        {{#link-to 'index'}}
-          <img src="//www.kaizomario.com/images/cmcheng.jpg">
+        {{#link-to 'index' class='nav-link home-link'}}
+          Home
         {{/link-to}}
-        {{#link-to 'about'}}
+        {{#link-to 'about' class='nav-link about-link'}}
           About
         {{/link-to}}
-        {{#link-to 'work'}}
+        {{#link-to 'work' class='nav-link work-link'}}
           Work
         {{/link-to}}
-        {{#link-to 'contact'}}
-          Contact
+        {{#link-to 'contact' class='nav-link contact-link'}}
+          Other
         {{/link-to}}
       </div>
       <div class="sticky-social">

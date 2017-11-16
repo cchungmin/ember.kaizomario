@@ -1,35 +1,85 @@
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+  color: $base02;
+  font-family: 'Noto Sans', 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
   font-smooth: auto;
   min-height: 100%;
+  line-height: 1.4;
 }
 
 body {
-  background: url(//www.kaizomario.com/images/background.jpg) no-repeat center center;
-  background-size: cover;
+  background-color: $base3;
   position: relative;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
   font-weight: 300;
   box-sizing: border-box;
   min-height: 100%;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $base01;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+h2 {
+  color: $yellow;
+}
+
+h3,
+h3 a {
+  color: $orange;
+}
+
+h4 {
+  color: $green;
+}
+
+a {
+  transition: opacity .6s;
+  text-decoration: none;
+
+  &:hover {
+    opacity: .6;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: inline;
 }
 
 section {
   padding: 45px 0;
-}
-
-.base,
-p,
-ul,
-ol {
-  font-size: 19px;
 }
 
 main {
@@ -38,8 +88,50 @@ main {
   min-height: initial;
 }
 
-body {
-  overflow-y: scroll;
+.left.links,
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.left.links {
+  padding: 5px;
+}
+
+.container {
+  padding: 30px 20px;
+}
+
+.menu {
+  background-color: $base2;
+  box-shadow: 1px 2px 4px $base01;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.nav-link.home-link {
+  color: $magenta;
+}
+
+.nav-link.about-link {
+  color: $violet;
+}
+
+.nav-link.work-link {
+  color: $blue;
+}
+
+.nav-link.contact-link {
+  color: $cyan;
 }
 
 .ctn-curtain {
@@ -51,23 +143,12 @@ body {
   /* background-color: #fff; */
 }
 
-.ctn-curtain.section-footer a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.ctn-curtain.section-footer a:hover {
-  color: #ff6b6b;
-}
-
 .section-inner {
   padding: 50px 0;
   vertical-align: middle;
 }
 
 .masthead {
-  color: #fff;
   font-family: 'Quicksand', sans-serif;
   line-height: 1.2;
   text-align: center;
@@ -80,15 +161,6 @@ body {
 
 .social {
   margin-top: 30px;
-}
-
-.social .links {
-  color: #fff !important;
-  font-size: 36px;
-}
-
-.social .links:hover {
-  color: #ff6b6b !important;
 }
 
 .kaizo-mario-container {
@@ -179,9 +251,21 @@ body.loaded .kaizo-mario-image-container {
   float: left;
 }
 
+.social .links,
+.ctn-curtain.section-footer a,
 .sticky-social a {
+  color: $base0;
   font-size: 36px;
   text-decoration: none;
+
+  &:hover {
+    color: $base1;
+    cursor: pointer;
+  }
+}
+
+.ctn-curtain.section-footer .blog-link {
+  font-size: 18px;
 }
 
 .sticky-social .list-inline {
@@ -211,7 +295,11 @@ body.loaded .kaizo-mario-image-container {
 }
 
 .jumbo {
-  color: #fff;
+  // color: #fff;
+}
+
+.about-block {
+  padding: 30px 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -222,14 +310,13 @@ body.loaded .kaizo-mario-image-container {
   .sticky-shortintro {
     display: none;
   }
-
-  .sticky-social {
-    width: 60%;
-    text-align: center;
-  }
 }
 
-@media screen and (max-width: 400px) {
+.project-block {
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 480px) {
   .sticky-social a {
     font-size: 24px;
   }
